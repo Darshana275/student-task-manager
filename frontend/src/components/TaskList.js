@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import './styles.css'
 
 export default function TaskList() {
   const [tasks, setTasks] = useState([]);
@@ -50,7 +51,7 @@ export default function TaskList() {
   };
 
   return (
-    <>
+    <div className="task-list-container">
       <select onChange={e => setFilter(e.target.value)} value={filter}>
         <option>All</option>
         <option>Pending</option>
@@ -73,6 +74,6 @@ export default function TaskList() {
             </li>
           ))}
       </ul>
-    </>
+    </div>
   );
 }

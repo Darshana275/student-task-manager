@@ -27,6 +27,7 @@ export default function Register() {
   };
 
   return (
+    <div className="register-box">
     <form onSubmit={onSubmit}>
       <h2>Register</h2>
       <input
@@ -55,5 +56,6 @@ export default function Register() {
       <button type="submit">Register</button>
       <p>Already have an account? <Link to="/login">Login</Link></p>
     </form>
+    </div>
   );
 }

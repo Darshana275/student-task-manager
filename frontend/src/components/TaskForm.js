@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import './styles.css'
 
 export default function TaskForm() {
   const [task, setTask] = useState({ title:'', description:'', deadline:'' });
@@ -20,11 +21,13 @@ export default function TaskForm() {
   };
 
   return (
+    <div className="task-form">
     <form onSubmit={onSubmit}>
       <input required placeholder="Title" value={task.title} onChange={e => setTask(s => ({...s,title:e.target.value}))} />
       <textarea required placeholder="Description" value={task.description} onChange={e => setTask(s => ({...s,description:e.target.value}))} />
       <input required type="date" value={task.deadline} onChange={e => setTask(s => ({...s,deadline:e.target.value}))} />
       <button>Add Task</button>
     </form>
+    </div>
   );
 }

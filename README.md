@@ -7,5 +7,6 @@ A simple full-stack web app to help students manage academic tasks. Built using 
 - Create, update, delete tasks
 - Mark tasks as done
 - Filter tasks by status (Pending, Completed, etc.)
+- 
 - Responsive UI with toast notifications
 
